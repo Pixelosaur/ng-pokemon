@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { InlineSearchFormComponent } from './components/forms/inline-search-form/inline-search-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PokemonsComponent } from './pages/pokemons-container/pokemons.component';
+import { PokemonDetailsComponent } from './pages/pokemon-details-view/pokemon-details.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +19,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         BrandComponent,
         InlineSearchFormComponent,
         FooterComponent,
+        PokemonsComponent,
+        PokemonDetailsComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],

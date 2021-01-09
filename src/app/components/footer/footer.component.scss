@@ -1,7 +1,15 @@
+@import '../../styles/utils/colors';
+
+$footer-background-color: $base-black-color;
+$footer__text-color: $base-slate-gray-color;
+
 footer {
-    background-color: #161616;
-    color: #758190;
-    font-size: 0.875rem;
+    background-color: $footer-background-color;
+
+    #copyright {
+        color: $footer__text-color;
+        font-size: 0.875rem;
+    }
 
     img {
         width: auto;
@@ -12,12 +20,12 @@ footer {
 
     #social-icons {
         a {
-            color: #758190;
+            color: $footer__text-color;
             &:not(:last-child) {
                 margin-right: 1em;
             }
             &:hover {
-                color: #d2051c;
+                color: $primary-color;
             }
         }
     }

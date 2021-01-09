@@ -1,5 +1,7 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+// Components
 import { PokemonsComponent } from './pages/pokemons-container/pokemons.component';
 import { PokemonDetailsComponent } from './pages/pokemon-details-view/pokemon-details.component';
 

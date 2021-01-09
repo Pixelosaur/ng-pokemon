@@ -1,6 +1,12 @@
+@import '../../styles/utils/typography';
+
 .navbar-brand {
+    font-family: $primary-font;
+    font-size: 1.75rem;
+
     img {
         width: auto;
         height: 40px;
+        margin-right: 0.375em;
     }
 }

@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { PokemonDetail } from '../../interfaces/pokemon-detail.interface';
+import { generateBlob } from '../../helpers/blob/blob.helper';
 
 @Component({
     selector: 'app-card',
@@ -8,11 +9,9 @@ import { PokemonDetail } from '../../interfaces/pokemon-detail.interface';
 })
 export class CardComponent implements AfterViewInit {
     @Input() pokemon: PokemonDetail;
-    // used to add dynamic blob shapes
     @ViewChild('card') card: ElementRef;
 
     ngAfterViewInit() {
-        console.log(this.card);
-        this.card.nativeElement.style.borderRadius = '70% 30% 32% 68% / 28% 27% 73% 72%';
+        this.card.nativeElement.style.borderRadius = generateBlob();
     }
 }

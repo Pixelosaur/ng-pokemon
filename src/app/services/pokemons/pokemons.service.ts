@@ -34,7 +34,6 @@ export class PokemonsService {
                     ),
                 ).pipe(
                     map((details: PokemonDetail[]) => {
-                        console.log(details);
                         const pokemons: Pokemons = {
                             ...response,
                             details,

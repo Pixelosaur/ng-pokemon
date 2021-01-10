@@ -12,6 +12,7 @@ import { InlineSearchFormComponent } from './components/forms/inline-search-form
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonsComponent } from './pages/pokemons-container/pokemons.component';
 import { PokemonDetailsComponent } from './pages/pokemon-details-view/pokemon-details.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { PokemonDetailsComponent } from './pages/pokemon-details-view/pokemon-de
         FooterComponent,
         PokemonsComponent,
         PokemonDetailsComponent,
+        PaginationComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [],

@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center justify-content-between">
+    <button
+        class="btn btn-primary btn-sm"
+        (click)="this.changePage('previous')"
+        [disabled]="isPreviousBtnDisabled"
+    >
+        Previous
+    </button>
+    <button
+        class="btn btn-primary btn-sm"
+        (click)="this.changePage('next')"
+        [disabled]="isNextBtnDisabled"
+    >
+        Next
+    </button>
+</div>

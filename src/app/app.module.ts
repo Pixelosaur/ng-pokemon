@@ -14,6 +14,7 @@ import { PokemonsComponent } from './pages/pokemons-container/pokemons.component
 import { PokemonDetailsComponent } from './pages/pokemon-details-container/pokemon-details.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CardComponent } from './components/card/card.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { CardComponent } from './components/card/card.component';
         PokemonDetailsComponent,
         PaginationComponent,
         CardComponent,
+        LoaderComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [],

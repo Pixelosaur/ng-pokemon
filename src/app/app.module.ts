@@ -11,7 +11,7 @@ import { BrandComponent } from './components/brand/brand.component';
 import { InlineSearchFormComponent } from './components/forms/inline-search-form/inline-search-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonsComponent } from './pages/pokemons-container/pokemons.component';
-import { PokemonDetailsComponent } from './pages/pokemon-details-view/pokemon-details.component';
+import { PokemonDetailsComponent } from './pages/pokemon-details-container/pokemon-details.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CardComponent } from './components/card/card.component';
 

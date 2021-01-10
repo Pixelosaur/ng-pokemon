@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonsComponent } from './pages/pokemons-container/pokemons.component';
 import { PokemonDetailsComponent } from './pages/pokemon-details-view/pokemon-details.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
         PokemonsComponent,
         PokemonDetailsComponent,
         PaginationComponent,
+        CardComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [],

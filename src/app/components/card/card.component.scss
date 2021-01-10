@@ -1,0 +1,33 @@
+@import '../../styles/utils/colors';
+
+$card-background-color: $base-dark-gray-color;
+$card__header-link-color: $base-light-gray-color;
+$card__header-link-hover-color: $base-red-color;
+
+.card {
+    background-color: $card-background-color;
+   // border-radius: 70% 30% 32% 68% / 28% 27% 73% 72%;
+
+    img {
+        transform: translateY(0%);
+        transition: all ease-in-out 400ms;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        a {
+            color: $card__header-link-color;
+
+            &:hover {
+                color: $card__header-link-hover-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            transform: translateY(-5%);
+        }
+    }
+}

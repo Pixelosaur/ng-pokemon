@@ -11,7 +11,13 @@ export class CardComponent implements AfterViewInit {
     @Input() pokemon!: PokemonDetail;
     @ViewChild('card') card!: ElementRef;
 
-    ngAfterViewInit() {
+    isLoading: boolean = true;
+
+    ngAfterViewInit(): void {
         this.card.nativeElement.style.borderRadius = generateBlob();
+    }
+
+    hideLoader(): void {
+        this.isLoading = false;
     }
 }

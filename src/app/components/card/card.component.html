@@ -1,9 +1,13 @@
 <div class="card h-100" #card>
     <img
+        [hidden]="isLoading"
         class="img-fluid"
-        [src]="pokemon.sprites.other['official-artwork']['front_default']"
+        [src]="pokemon.sprites.other['dream_world']['front_default']"
         [alt]="pokemon.name"
+        (load)="hideLoader()"
     />
+
+    <app-loader [hidden]="!isLoading"></app-loader>
 
     <div class="card-body">
         <h6 class="card-title text-capitalize">

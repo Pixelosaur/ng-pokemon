@@ -7,7 +7,9 @@
 
     <div class="card-body">
         <h6 class="card-title text-capitalize">
-            <a [routerLink]="pokemon.name" class="stretched-link">{{ pokemon.name }}</a>
+            <a [routerLink]="pokemon.name" [state]="pokemon" class="stretched-link">{{
+                pokemon.name
+            }}</a>
         </h6>
     </div>
 </div>

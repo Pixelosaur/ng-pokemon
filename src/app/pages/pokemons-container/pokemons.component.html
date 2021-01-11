@@ -1,4 +1,4 @@
-<div *ngIf="pokemonDetails.length > 0">
+<div *ngIf="!isLoading">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 pt-4 pb-5 card-wrapper">
         <div class="col mb-4" *ngFor="let pokemon of pokemonDetails">
             <app-card [pokemon]="pokemon"></app-card>
@@ -16,6 +16,6 @@
     </div>
 </div>
 
-<div *ngIf="pokemonDetails.length === 0">
+<div *ngIf="isLoading">
     <app-loader></app-loader>
 </div>

@@ -13,11 +13,13 @@ import { PokemonDetail } from '../../interfaces/pokemon-detail.interface';
 export class PokemonsComponent implements OnInit {
     pokemonDetails: PokemonDetail[] = [];
 
-    nextRequestUrl: string = '';
-    previousRequestUrl: string = '';
+    nextRequestUrl: string | undefined;
+    previousRequestUrl: string | undefined;
 
     isNextBtnDisabled: boolean = false;
     isPreviousBtnDisabled: boolean = true;
+
+    isLoading: boolean = true;
 
     constructor(private pokemonsService: PokemonsService) {}
 
@@ -30,10 +32,13 @@ export class PokemonsComponent implements OnInit {
             (pokemons: Pokemons) => {
                 this.pokemonDetails = pokemons.details;
 
-                this.nextRequestUrl = pokemons.next;
+                this.nextRequestUrl = pokemons.next || '';
                 this.previousRequestUrl = pokemons.previous || '';
 
-                this.isPreviousBtnDisabled = !this.previousRequestUrl;
+                this.isPreviousBtnDisabled = pokemons.previous === null;
+                this.isNextBtnDisabled = pokemons.next === null;
+
+                this.isLoading = !this.pokemonDetails;
             },
             (error: any) => {
                 console.error(error);
@@ -41,7 +46,10 @@ export class PokemonsComponent implements OnInit {
         );
     }
 
-    onPageChange(page: string) {
+    onPageChange(page: string): void {
+        // reset loader
+        this.isLoading = true;
+
         if (page === 'next') {
             this.getPokemonList(this.nextRequestUrl);
         } else {

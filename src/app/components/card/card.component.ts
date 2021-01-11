@@ -8,8 +8,8 @@ import { generateBlob } from '../../helpers/blob/blob.helper';
     styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements AfterViewInit {
-    @Input() pokemon: PokemonDetail;
-    @ViewChild('card') card: ElementRef;
+    @Input() pokemon!: PokemonDetail;
+    @ViewChild('card') card!: ElementRef;
 
     ngAfterViewInit() {
         this.card.nativeElement.style.borderRadius = generateBlob();

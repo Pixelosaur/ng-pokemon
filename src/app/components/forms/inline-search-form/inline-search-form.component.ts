@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
     templateUrl: './inline-search-form.component.html',
 })
 export class InlineSearchFormComponent {
-    @Input() searchButtonText: string = '';
-    @Input() inputPlaceholderText: string = '';
+    @Input() searchButtonText: string | null = '';
+    @Input() inputPlaceholderText: string | null = '';
+    @Input() buttonIcon: string | null = '';
 }

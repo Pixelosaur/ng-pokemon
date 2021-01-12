@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
     brandName: string = 'Pokédex';
-    searchButtonText: string = 'Search';
+    buttonIcon: string = 'search';
     inputPlaceholderText: string = 'Search';
 }

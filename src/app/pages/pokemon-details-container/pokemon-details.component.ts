@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { PokemonDetail } from '../../interfaces/pokemon-detail.interface';
 
 @Component({
@@ -8,13 +7,11 @@ import { PokemonDetail } from '../../interfaces/pokemon-detail.interface';
     styleUrls: ['./pokemon-details.component.scss'],
 })
 export class PokemonDetailsComponent implements OnInit {
-    // name: string | null = '';
-    pokemonDetail: PokemonDetail | null = null;
+    pokemon: PokemonDetail | undefined;
 
-    constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+    constructor() {}
 
     ngOnInit(): void {
-        this.pokemonDetail = history.state;
-        // this.name = this.activatedRoute.snapshot.paramMap.get('pokemon');
+        this.pokemon = history.state;
     }
 }
